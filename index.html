@@ -1,41 +1,1012 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Sample Deployment</title>
-  <style>
-    body {
-      color: #ffffff;
-      background-color: #007f3f;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-    
-    h1 {
-      font-size: 500%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-    
-    h2 {
-      font-size: 200%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-	  
-	  h3 {
-		  font-color: red;
-		  font-size:40px;
-  </style>
-</head>
-<body>
-	<h1>This is my page suraj singh</h1>
-  <div align="center">
-    <h1>Congratulations!</h1>
-    <h2>You have successfully created a pipeline that retrieved this source application from an Amazon S3 bucket and deployed it 
-	to three Amazon EC2 instances using AWS CodeDeploy.</h2>
-	  <p>For next steps, read the AWS CodePipeline Documentation.</br>.</p>
-  </div>
-</body>
-</html>
+<!doctype html>
+<!-- If multi-language site, reconsider usage of html lang declaration here. -->
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8">
+    <!-- Setting the viewport for Media Query -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home | Danglelico</title>
+    <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="favicon.ico" /> 
+    <!-- Adding reference to font awesome -->
+    <link rel="stylesheet" href="assets/vendor/font/fontawesome-all.min.css">
+    <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+  
+<style>
+@charset "utf-8";
 
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+  -------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+   blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+   ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+   dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+   tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+   figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+   }
+
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure,
+   footer, header, hgroup, menu, nav, section {
+    display: block;
+   }
+
+   /* Force scrollbar */
+   html { overflow-y: scroll; }
+
+   /* Align radios and text inputs with their label */
+
+   input[type='radio'] { vertical-align: text-bottom; }
+
+   /* Hand cursor on clickable input elements */
+   label,
+   input[type='button'],
+   input[type='submit'],
+   button {
+    cursor: pointer;
+   }
+
+   strong {
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+   }
+
+   em { font-style: italic; }
+
+   img {
+    border: 0;
+    vertical-align: middle;
+   }
+
+   sub,
+   sup {
+    vertical-align: baseline;
+    position: relative;
+    font-size: 55%;
+    line-height: 0;
+   }
+
+   sup { top: -.7em; }
+
+   sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+ .futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+ }
+
+ /* ======= Your Styling Goes Below ======= */
+
+ /*Common Styling Starts Here
+ =============================================*/
+* { box-sizing: border-box; }
+body { font-family: sans-serif; }
+
+a {
+  display: inline-block; 
+  text-decoration: none;
+  }
+
+li { list-style-type: none; }
+
+.wrapper {
+  max-width: 1500px;
+  width: 95.5%;
+  margin: 0 auto;
+}
+
+ /*Header Stylng Starts Here
+ ===========================================*/
+  
+h1 { display: inline-block; }
+h1 a { text-indent: -9999px; }
+h1 img { float: right; }
+header .wrapper { padding: 18px 0 21px; }
+header { background: #000; }
+
+nav { 
+  padding: 13px 0 0 0;
+  float: right; 
+}
+
+nav li { 
+  margin-right: 20.5px;
+  display: inline-block; 
+}
+
+nav li:last-child { margin-right: 0 }
+
+nav li a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+nav li a:after {
+  content: '';
+  border-bottom: 2px solid #fff;
+  display: block;
+  transform: scaleX(0);
+  transition: 0.5s linear;
+}
+
+nav li a:hover:after { transform: scaleX(1); }
+.hamburger { display: none; }
+.hamburger { width: 30px; }
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  margin-top: 3px;
+  display: block;
+  z-index: 10;
+  background-color: black;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+/*Banner styling starts
+=================================================*/
+
+.banner {
+  max-width: 100%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: 0 auto;
+  position: relative
+}
+
+.banner .wrapper {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.banner__img { width: 100%; }
+.banner img { width: 100%; }
+
+.banner__details {
+  position: absolute;
+  width: 24.9%;
+  top: 125px;
+  right: 8%;
+}
+
+.banner__details p {
+  margin: 32px 0 32px;
+  text-align: center;
+}
+
+.banner__details a { 
+  padding: 13px 25.5%;
+  background: #6c050e;
+  color: #fff;
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .3s ease-in-out;
+}
+
+.banner__details a:hover {
+  background: #fff;
+  color: #6c050e;
+}
+
+h2 {
+  margin: 2.7% 2.3% 2.7% 17%;
+  display: inline-block;
+  color: #fff;
+  font-size: 27px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #fff;
+}
+
+.dealer { background: #000; }
+
+form {
+  margin-bottom: 22px;
+  display: inline-block; 
+  position: relative; 
+}
+
+button { 
+  border: none;
+  position: absolute;
+  top: 16px;
+  left: 170%;
+  background: rgb(255,255,255,0);
+  text-indent: -9999px;
+}
+
+button:before { 
+  float: right;
+  font-size: 23px; 
+  text-indent: 0; 
+}
+
+input {
+  width: 190%;
+  padding: 12px 0;
+  margin: 5px 0 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-indent: 15px;
+}
+
+form span { text-indent: -9999px; }
+
+form span:before {
+  float: right;
+  font-size: 20px;
+  text-indent: 0;
+}
+
+/*Guitars New Collection Styling Stats
+==============================================*/
+
+.guiter-lists__new-guitars figure {
+  width: 100%;
+  position: relative;
+}
+
+.guiter-lists__new-guitars a { display: block }
+
+.guiter-lists__new-guitars img {
+  width: 100%;
+  display: block;
+}
+
+.guiter-lists figcaption {
+  width: 100%;
+  padding: 13px 0;
+  bottom: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s ease;
+}
+
+.guiter-lists a:hover figcaption {
+  padding: 100px 0;
+  background: rgba(255, 0, 0, 0);
+}
+
+ /*Guitar Type Styling Starts Here
+ =================================================*/
+
+.guiter-lists { margin-top: 32px; }
+
+.guiter-lists__guitar-type ul figure {
+  width: 100%;
+  position: relative;
+}
+
+.guiter-lists__guitar-type img {
+  width: 100%;
+  display: block;
+}
+
+.guiter-lists__guitar-type a { display: block; }
+
+.guiter-lists__more-guitars figcaption {
+  width: 100%;
+  padding: 13px 0;
+  position: absolute;
+  bottom: 0;
+  color: #f1f1f1;
+  font-size: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s ease;
+}
+
+.guiter-lists__more-guitars a:hover figcaption {
+  padding: 100px 0;
+  background: rgba(255, 0, 0, 0);
+}
+
+.guiter-lists__guitar-type ul{
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.guiter-lists__guitar-type li { flex-basis: 30%; }
+
+.guiter-lists__guitar-type ul + figure {
+  width: 100%;
+  position: relative;
+}
+
+.guiter-lists__guitar-type ul + figure img {
+  width: 100%;
+  display: block;
+}
+
+.guiter-lists__guitar-type ul + figure figcaption {
+  width: 100%;
+  bottom: 0;
+  margin: 21% 0;
+  position: absolute;
+  color: #f1f1f1;
+  font-size: 29px;
+  text-align: center;
+  transition: .5s ease;
+}
+
+.guiter-lists .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.guiter-lists__guitar-type { flex-basis: 48.7%; }
+.guiter-lists__new-guitars { flex-basis: 48.7%; }
+
+/*More Guitar Styling Strats Here
+================================================*/
+
+.guiter-lists__more-guitars { margin-top: 15px; }
+
+.guiter-lists__more-guitars figure {
+  width: 100%;
+  position: relative;
+}
+
+.guiter-lists__more-guitars img {
+  width: 100%;
+  display: block;
+}
+
+.guiter-lists__more-guitars li > img {
+  width: 100%;
+  position: relative;
+}
+
+.guiter-lists__more-guitars figcaption {
+  width: 100%;
+  padding: 13px 0;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  font-size: 29px;
+  text-align: center;
+  transition: .5s ease;
+}
+
+.guiter-lists__more-guitars ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.guiter-lists__more-guitars li { flex-basis: 31.7%; }
+.guiter-lists__more-guitars li a { display: block; }
+
+ /*Social Media Links Starts Here
+ ===================================================*/
+
+.social-site { margin: 35px 0;}
+
+.social-site ul {
+  display: flex;
+  justify-content: center;
+}
+
+.social-site li { margin: 0 1%; }
+
+.social-site a {
+  font-size: 25px;
+  color: #444046;
+}
+
+ .social-site li:first-child::before {
+ content: "";
+ vertical-align: middle;
+ width: 40px;
+ height: 2px;
+ margin: 0 auto;
+ margin-right: 20px;
+ display: inline-block;
+ background-color: #424041;
+ }
+
+ .social-site li:last-child::after {
+ content: "";
+ width: 40px;
+ height: 2px;
+ margin: 0 auto;
+ margin-left: 20px;
+ display: inline-block;
+ background-color: #424041;
+ vertical-align: middle;
+ }
+
+
+.social-site a { transition: .5s ease-in-out; }
+.social-site a:hover { transform: scale(1.3); }
+.social-site li:first-child a:hover { color: #3b5999; }
+.social-site li:nth-child(2) a:hover { color: #dd4b39; }
+.social-site li:nth-child(3) a:hover { color: #55acee; }
+.social-site li:last-child a:hover { color: #c8232c; }
+
+/*Footer Styling Stars Here
+=====================================================*/
+
+footer { 
+  padding-top: 34px;
+  background: #000; 
+}
+
+footer a { 
+  position: relative;;
+  color: #fff; 
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  transition: 1s linear; 
+}
+
+h3 {
+  margin: 0 0 24px 0;
+  color: #fff; 
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer .wrapper div {
+  width: 16.2%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+footer div:not(:first-child) a { text-transform: capitalize; }
+
+footer div:not(:first-child) a:before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  background-color: #fff;
+  transition: all ease-in-out 500ms;
+}
+
+footer div:not(:first-child) a:hover:before { width: 100%; }
+
+address { 
+  margin-bottom: 10px;
+  color: #fff; 
+  line-height: 20px;
+}
+
+.footer__contact li:last-child {
+  margin: 30px 0 45px ;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer__contact li:nth-child(2) { margin-bottom: 12px; }
+.footer__contact li:nth-child(2) a:before { margin-right: 12px; }
+.footer__contact li:nth-child(3) a:before { margin-right: 12px; }
+.footer__contact { margin-right: 17.5%; }
+
+.footer__contact li a {
+  letter-spacing: 1px;  
+  transition: 1s ease-in-out;
+  word-break: break-word;
+}
+
+.footer__contact li:last-child a {
+  padding: 7px 8%;
+  border: 2px solid #848284; 
+  text-transform: capitalize;
+}
+
+.footer__contact li:last-child  a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.footer__contact li:nth-child(2) a:hover,
+.footer__contact li:nth-child(3) a:hover { color: #dd4b39; }
+
+.footer__bottom { 
+  width: 100%;
+  padding: 15px 0 15px;
+  display: inline-block; 
+  background: #332e34;
+  text-align: center;
+}
+
+.footer__bottom li { 
+  margin-right: 30px;
+  display: inline-block; 
+}
+
+.footer__bottom li a { 
+  color: #7b767d;
+  font-family: sans-serif;  
+  font-size: 12px;
+  letter-spacing: -1px;
+  text-transform: capitalize; 
+  transition: .3s ease-in-out;
+}
+
+.footer__bottom li a:hover { color: #fff; } 
+
+/* Resnsive Strats Here
+=================================================== */
+
+@media screen and (max-width: 1024px) {
+  .banner__details{ top: 50px; }
+  footer .wrapper div { width: 15%; }
+  .footer__contact li:last-child a { 
+    padding: 2px 2%; 
+    font-size: 10px;
+  }
+
+  }
+
+@media screen and (max-width: 995px) {
+  .banner__details a { padding: 7px 10%; }
+  .banner__details { display: none; }
+  /* .footer__contact li:last-child a { padding: 2px 2%; }   */
+  h2 { display: block; }
+  form { 
+    display: block;
+    width: 100%; 
+  }
+
+  input {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav { display: none; }
+
+  .footer__contact { margin-right: 11%; }
+}
+
+@media screen and (max-width: 768px) {
+  .guiter-lists__new-guitars { 
+    flex-basis: 100%; 
+    margin-bottom: 20px;
+  }
+  
+  footer .wrapper div { width: 30%; }
+  .footer__contact { margin-right: 8%; }
+  .guiter-lists__guitar-type { flex-basis: 100%; }
+  .footer__contact li:last-child { text-align: left; }
+  .footer__connect { margin-right: 8%; }
+}
+
+/* @media screen and (max-width: 540px)  */
+
+</style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <!--Header Starts Here-->
+      <header>
+        <!--Logo Starts Here-->
+        <!--Header Wrapper Starts Here-->
+        <div class="wrapper cf">
+          <!--Logo Starts Here-->
+          <h1>
+            <a href="index.html" title="Danqelico">
+              <img src="https://dummyimage.com/155X45/b8611e/fff" alt="Danqelico">Dangelico logo
+            </a>    
+          </h1>
+          <!--Logo Ends Here-->
+          <!--Hamburger Starts-->
+          <div class="hamburger">
+            <span class="first-ham"></span>
+            <span class="second-ham"></span>
+            <span class="third-bar"></span> 
+          </div>
+          <!--Hamburger Ends-->
+          <!--Navigation Bar Starts Here-->
+          <nav>
+            <ul class="navigation">
+              <li>
+                <a href="#FIXME" title="About">about</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Guitars">guitars</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Where To Buy">where to buy</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Strings">strings</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Social">social</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Store">store</a>
+              </li>     
+              <li>
+                <a href="#FIXME" title="Artists">artists</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Showroom">showroom</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Contact">contact</a>
+              </li>
+            </ul>
+          </nav>
+          <!--Navigation Bar Ends Here-->
+        </div>
+        <!--Header Wrapper Ends Here-->
+        <!--Logo Starts Here-->
+      </header>
+      <!--Header Starts Ends-->
+      <!--Main Starts Here-->
+      <main>
+        <!--Banner Section Starts Here-->
+        <div class="banner">
+          <!--Wrapper Starts Here-->
+          <div class="wrapper">
+            <figure class="banner__img">
+              <img src="https://dummyimage.com/1351x600/b8611e/b8611e" alt="Banner Image">
+            </figure>
+            <div class="banner__details">
+              <figure>
+                <img src="https://dummyimage.com/260x174/4a433d/4a433d" alt="Excel Image">
+              </figure>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, officia!</p>
+              <a href="#FIXME" title="Learn More">learn more</a>
+            </div>
+           <!--  <div class="slider-icon">
+              <ul>
+                <li><a href="#FIXME" title="Slider icon" class="fas fa-circle"></a></li>
+                <li><a href="#FIXME" title="Slider icon" class="fas fa-circle"></a></li>
+              </ul>
+            </div> -->
+          </div>
+          <!--Wrapper Ends Here-->
+        </div>
+        <!--Banner Section Ends Here-->
+        <!-- Danglelico Dealer Starts Here -->
+        <section class="dealer">
+          <!--Wrapper Starts Here-->
+          <div class="wrapper">
+            <h2>find a d'anglelico dealer</h2>
+            <form action="#FIXME" method="POST">
+              <div>
+                <input type="search" placeholder="Enter Zip Or Address">
+              </div>
+              <button class="fas fa-search">search</button>
+            </form>
+          </div>
+          <!--Wrapper Ends Here-->
+        </section>
+        <!-- Danglelico Dealer Ends Here -->
+        <!-- Guitars Lists Starts Here -->
+        <div class="guiter-lists">
+          <div class="wrapper">
+            <!-- New guitars Starts Here-->
+            <div class="guiter-lists__new-guitars">
+              <a href="#FIXME" title="NEW GUITARS 2018">
+                <figure>
+                  <img src="https://dummyimage.com/630x630/ae7c45/ae7c45" alt="New Guitars In 2018" >
+                  <figcaption class="uppercase">new for 2018</figcaption>
+                 </figure>
+               </a>
+            </div>
+            <!-- New Guitars Ends Here -->
+            <!-- Types of Guitars Starts Here-->
+            <div class="guiter-lists__guitar-type">
+              <ul> 
+                <li>
+                  <a href="#FIXME" title="PREMIER GUITARS">
+                    <figure>
+                      <img src="https://dummyimage.com/190x315/28454c/28454c" alt="Premier guitars" >
+                      <figcaption>premier</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="EXCEL GUITARS">
+                    <figure>
+                      <img src="https://dummyimage.com/190x315/28454c/28454c" alt="Excel Guitars" >
+                      <figcaption>excel</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="DELUXE GUITARS">
+                    <figure>
+                      <img src="https://dummyimage.com/190x315/6d091e/6d091e" alt="Deluxe Guitars" >
+                      <figcaption>deluxe</figcaption>
+                    </figure>
+                  </a>
+                </li>
+              </ul>
+              <figure>
+                <img src="https://dummyimage.com/630x300/000/fff" alt="History Of D'anglelico">
+                <figcaption class="uppercase">history</figcaption>
+              </figure>
+            </div>
+            <!-- Types of Guitars Ends Here -->
+          </div>
+        </div>
+        <!-- New Guitars List Ends ends -->
+        <!-- More Guitars Starts Here -->
+        <div class="guiter-lists__more-guitars">
+          <div class="wrapper">
+            <ul>
+              <li>
+                <a href="#FIXME" title="PREMIER NIAGARA">
+                  <figure>
+                    <img src="https://dummyimage.com/411x410/62261c/62261c" alt="Premier Niagara" >
+                    <figcaption class="uppercase">premier niagara</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <img src="https://dummyimage.com/411x410/c9c4be/c9c4be" alt="Guiter">
+              </li>
+              <li>
+                <a href="#FIXME" title="DELUXE BEDFORD">
+                  <figure>
+                    <img src="https://dummyimage.com/411x410/977c7a/977c7a" alt="Deluxe Bedford" >
+                    <figcaption class="uppercase">deluxe bedford</figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- More Guitars Ends Here-->
+        <!-- Social Media Site starts Here -->
+        <div class="social-site">
+          <div class="wrapper">
+            <ul>
+              <li>
+                <a href="#FIXME" title="Facebook" class="fab fa-facebook-f"></a>
+            </li>
+              <li>
+                <a href="#FIXME" title="Instagram" class="fab fa-instagram"></a>
+            </li>
+              <li>
+                <a href="#FIXME" title="Twitter" class="fab fa-twitter"></a>
+            </li>
+              <li>
+                <a href="#FIXME" title="Youtube" class="fab fa-youtube"></a>
+            </li>
+            </ul>
+          </div>
+        </div>    
+        <!-- Social Media Site Ends Here-->
+      </main>
+      <!--Main Ends Here-->
+      <!--Footer Starts Here-->
+      <footer class="footer"> 
+        <!--Wrapper Starts Here-->
+        <div class="wrapper">
+          <div class="footer__contact">
+            <h3>contact</h3>
+            <ul>
+              <li>
+                <address>D'Angelico Guitars of America 141 West 28th Street, 4th Floor New York, NY 10001</address>
+              </li>
+              <li>
+                <a href="mailto:info@dangelicoguitars.com" title="info@dangelicoguitars.com" class="fas fa-envelope">info@dangelicoguitars.com</a>
+              </li>
+              <li>
+                <a href="tel:(646)4608472" title="(646)4608472" class="fas fa-phone">(646) 460 8472</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Become A Dealer">become a dealer</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__guitars">
+            <h3>guitars</h3>
+            <ul>
+              <li>
+                <a href="#FIXME" title="Electric">electric</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Acoustic">acoustic</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Bass">bass</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Premier Series">premier series</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Excel Series">excel series</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Deluxe Series">deluxe series</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Master Builder">master builder</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__about">
+            <h3>about</h3>
+            <ul>
+              <li>
+                <a href="#FIXME" title="Showroom">showroom</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Where To Buy">where to buy</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Registration">registration</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Artists">artists</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__connect">
+            <h3>connect</h3>
+            <ul>
+              <li>
+                <a href="#FIXME" title="Social">social</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Newsletter">newsletter</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="News">news</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Customer Survey">customer survey</a>
+              </li>
+              <l`i>
+                <a href="#FIXME" title="Contact">contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__shop">
+            <h3>shop</h3>
+            <ul>
+              <li>
+                <a href="#FIXME" title="Accessories">accessories</a>
+              </li>
+              <li>
+                <a href="#FIXME" title="Guitars">guitars</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Wrapper Ends Here-->
+      </footer>
+      <!--Footer Ends Here-->
+      <div class="footer__bottom">
+        <ul>
+          <li>
+            <a href="#FIXME" title="Register">register</a>
+          </li>
+          <li>
+            <a href="#FIXME" title="Warrenty">warrenty</a>
+          </li>
+          <li>
+            <a href="#FIXME" title="Privacy Policy">privacy police</a>
+          </li>
+          <li>
+            <a href="#FIXME" title="Term Of Use">term of use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
